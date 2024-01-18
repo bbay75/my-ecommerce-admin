@@ -12,7 +12,7 @@ export default function HomeHeader() {
             className="w-6 h-6 rounded-md sm:hidden"
           />
           <div>
-            Hello, <b>{session?.user?.name}</b>
+            Сайн уу, <b>{session?.user?.name}</b>
           </div>
         </div>
       </h2>

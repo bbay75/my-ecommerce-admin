@@ -46,11 +46,11 @@ function SettingsPage({ swal }) {
   }
   return (
     <Layout>
-      <h1>Settings</h1>
+      <h1>Тохиргоо</h1>
       {isLoading && <Spinner />}
       {!isLoading && (
         <>
-          <label>Featured product</label>
+          <label>Онцлох бүтээгдэхүүн</label>
           <select
             value={featuredProductId}
             onChange={(ev) => setFeaturedProductId(ev.target.value)}
@@ -62,7 +62,7 @@ function SettingsPage({ swal }) {
                 </option>
               ))}
           </select>
-          <label>Shipping price (in usd)</label>
+          <label>Хүргэлтийн үнэ (MNT)</label>
           <input
             type="number"
             value={shippingFee}
@@ -70,7 +70,7 @@ function SettingsPage({ swal }) {
           />
           <div>
             <button onClick={saveSettings} className="btn-primary">
-              Save settings
+              Тохиргоог хадгалах
             </button>
           </div>
         </>

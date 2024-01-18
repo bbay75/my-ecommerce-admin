@@ -22,7 +22,7 @@ export default function EditProductPage() {
   }, [id]);
   return (
     <Layout>
-      <h1>Edit Product</h1>
+      <h1>Бүтээгдэхүүнийг засах</h1>
       {isloading && <Spinner />}
       {productInfo && <ProductForm {...productInfo} />}
     </Layout>

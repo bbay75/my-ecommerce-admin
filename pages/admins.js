@@ -33,11 +33,11 @@ function AdminsPage({ swal }) {
   function deleteAdmin(_id, email) {
     swal
       .fire({
-        title: "Are you sure?",
-        text: `Do you want to delete admin ${email}?`,
+        title: "Та зөвшөөрч байна уу?",
+        text: `Та ${email} админыг устгахыг зөвшөөрч байна уу? `,
         showCancelButton: true,
-        cancelButtonText: "Cancel",
-        confirmButtonText: "Yes, Delete!",
+        cancelButtonText: "Цуцлах",
+        confirmButtonText: "Тийм ээ, устга!",
         confirmButtonColor: "#d55",
         reverseButtons: true,
       })
@@ -65,8 +65,8 @@ function AdminsPage({ swal }) {
   }, []);
   return (
     <Layout>
-      <h1>Admins</h1>
-      <h2>Add new admin</h2>
+      <h1>Админууд</h1>
+      <h2>Шинээр админ нэмнэ үү</h2>
 
       <form onSubmit={addAdmin}>
         <div className="flex gap-2">
@@ -78,16 +78,16 @@ function AdminsPage({ swal }) {
             placeholder="google email"
           />
           <button type="submit" className="btn-primary py-1 whitespace-nowrap">
-            Add admin
+            Админ нэмнэх
           </button>
         </div>
       </form>
 
-      <h2>Existing admins</h2>
+      <h2>Одоо байгаа админууд</h2>
       <table className="basic">
         <thead>
           <tr>
-            <th className="text-left">Admin google email</th>
+            <th className="text-left">Админ google email</th>
             <th></th>
             <th></th>
           </tr>
@@ -116,7 +116,7 @@ function AdminsPage({ swal }) {
                     }
                     className="btn-red"
                   >
-                    Delete
+                    УСТГАХ
                   </button>
                 </td>
               </tr>

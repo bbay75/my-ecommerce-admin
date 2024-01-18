@@ -47,43 +47,51 @@ export default function HomeStats() {
 
   return (
     <div>
-      <h2>Orders</h2>
+      <h2>Захиалга</h2>
       <div className="tiles-grid">
         <div className="tile">
-          <h3 className="tile-header">Today</h3>
+          <h3 className="tile-header">Өнөөдөр</h3>
           <div className="tile-number">{ordersToday.length}</div>
-          <div className="tile-desc">{ordersToday.length} orders today</div>
+          <div className="tile-desc">
+            өнөөдөрийн захиалга {ordersToday.length}
+          </div>
         </div>
         <div className="tile">
-          <h3 className="tile-header">This week</h3>
+          <h3 className="tile-header">Энэ долоо хоногт</h3>
           <div className="tile-number">{ordersWeek.length}</div>
-          <div className="tile-desc">{ordersWeek.length} orders this week</div>
+          <div className="tile-desc">
+            энэ долоо хоногийн захиалга {ordersWeek.length}
+          </div>
         </div>
         <div className="tile">
-          <h3 className="tile-header">This month</h3>
+          <h3 className="tile-header">Энэ сард</h3>
           <div className="tile-number">{ordersMonth.length}</div>
           <div className="tile-desc">
-            {ordersMonth.length} orders this month
+            энэ сарын захиалга {ordersMonth.length}
           </div>
         </div>
       </div>
-      <h2>Revenue</h2>
+      <h2>Орлого</h2>
       <div className="tiles-grid">
         <div className="tile">
-          <h3 className="tile-header">Today</h3>
-          <div className="tile-number">$ {ordersTotal(ordersToday)}</div>
-          <div className="tile-desc">{ordersToday.length} orders today</div>
-        </div>
-        <div className="tile">
-          <h3 className="tile-header">This week</h3>
-          <div className="tile-number">$ {ordersTotal(ordersWeek)}</div>
-          <div className="tile-desc">{ordersWeek.length} orders this week</div>
-        </div>
-        <div className="tile">
-          <h3 className="tile-header">This month</h3>
-          <div className="tile-number">$ {ordersTotal(ordersMonth)}</div>
+          <h3 className="tile-header">Өнөөдөр</h3>
+          <div className="tile-number">{ordersTotal(ordersToday)} ₮</div>
           <div className="tile-desc">
-            {ordersMonth.length} orders this month
+            өнөөдөрийн захиалга {ordersToday.length}
+          </div>
+        </div>
+        <div className="tile">
+          <h3 className="tile-header">Энэ долоо хоногт</h3>
+          <div className="tile-number">{ordersTotal(ordersWeek)} ₮</div>
+          <div className="tile-desc">
+            энэ долоо хоногийн захиалга {ordersWeek.length}
+          </div>
+        </div>
+        <div className="tile">
+          <h3 className="tile-header">Энэ сард</h3>
+          <div className="tile-number">{ordersTotal(ordersMonth)} ₮</div>
+          <div className="tile-desc">
+            энэ сарын захиалга {ordersMonth.length}
           </div>
         </div>
       </div>

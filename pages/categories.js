@@ -59,11 +59,11 @@ function Categories({ swal }) {
   function deleteCategory(category) {
     swal
       .fire({
-        title: "Are you sure?",
-        text: `Do you want to delete ${category.name}?`,
+        title: "Та зөвшөөрч байна уу?",
+        text: `Та "${category.name}" ангилалыг устгахыг зөвшөөрч байна уу?`,
         showCancelButton: true,
-        cancelButtonText: "Cancel",
-        confirmButtonText: "Yes, Delete!",
+        cancelButtonText: "Цуцлах",
+        confirmButtonText: "Тийм ээ, устга!",
         confirmButtonColor: "#d55",
         reverseButtons: true,
       })
@@ -103,17 +103,17 @@ function Categories({ swal }) {
   }
   return (
     <Layout>
-      <h1>Categories</h1>
+      <h1>Ангилал</h1>
       <label>
         {editedCategory
-          ? `Edit category ${editedCategory.name}`
-          : "Create new Category"}
+          ? `Ангилал засах "${editedCategory.name}"`
+          : "Шинэ ангилал үүсгэх"}
       </label>
       <form onSubmit={saveCategory}>
         <div className="flex gap-1">
           <input
             type="text"
-            placeholder={"Category name"}
+            placeholder={"ангиллын нэр"}
             onChange={(ev) => setName(ev.target.value)}
             value={name}
           />
@@ -166,7 +166,7 @@ function Categories({ swal }) {
                   type="button"
                   className="btn-red"
                 >
-                  Remove
+                  УСТГАХ
                 </button>
               </div>
             ))}
@@ -183,11 +183,11 @@ function Categories({ swal }) {
               }}
               className="btn-default"
             >
-              Cancel
+              Цуцлах
             </button>
           )}
           <button type="submit" className="btn-primary py-1">
-            Save
+            Хадгалах
           </button>
         </div>
       </form>
@@ -195,7 +195,7 @@ function Categories({ swal }) {
         <table className="basic mt-4">
           <thead>
             <tr>
-              <td>Category name</td>
+              <td>Ангиллын нэр</td>
               <td>Parent category</td>
               <td></td>
             </tr>
@@ -220,14 +220,14 @@ function Categories({ swal }) {
                       onClick={() => editCategory(category)}
                       className="btn-default mr-1"
                     >
-                      Edit
+                      ЗАСАХ
                     </button>
 
                     <button
                       onClick={() => deleteCategory(category)}
                       className="btn-red"
                     >
-                      Delete
+                      УСТГАХ
                     </button>
                   </td>
                 </tr>
